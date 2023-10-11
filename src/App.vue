@@ -4,6 +4,8 @@ import Header from './views/components/header.vue';
 </script>
 
 <template>
-  <Header />
-  <RouterView />
+  <div class=" bg-black h-screen">
+    <Header />
+    <RouterView />
+  </div>
 </template>
