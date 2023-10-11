@@ -2,6 +2,7 @@
 <script setup>
 import CardComponent from './components/CardComponent.vue';
 
+
 const cardsData = [
   { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' },
   { id: 2, title: 'Card 2', content: 'Conteúdo do Card 2' },
@@ -12,6 +13,10 @@ const cardsData = [
   { id: 7, title: 'Card 7', content: 'Conteúdo do Card 7' },
   { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
 ];
+function redirectTodetails(id) {
+  console.log(id);
+
+}
 
 
 </script>
@@ -19,7 +24,7 @@ const cardsData = [
 <template>
   <main class="pt-9">
     <div class="mx-auto flex flex-wrap max-w-screen-xl justify-center items-center gap-8">
-      <CardComponent v-for="(card, index) in cardsData" :key="index" :cardData="card" @click="redirectToScolt(card.id)" />
+      <CardComponent v-for="(card, index) in cardsData" :key="index" :cardData="card" v-on:click="redirectTodetails(card.id)" />
     </div>
   </main>
 </template>
