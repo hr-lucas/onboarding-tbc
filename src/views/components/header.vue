@@ -1,10 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <div>
-
-    </div>
+    <header class="bg-black">
+        <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+            <img src="../../assets/LOGO.svg" alt="" srcset="">
+        </div>
+    </header>
 </template>
-
-<script setup>
-
-</script>
