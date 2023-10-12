@@ -16,10 +16,8 @@ const cardsData = [
 </script>
 
 <template>
-  <div class="pt-9">
-    <div class="mx-auto flex flex-wrap max-w-screen-xl justify-center items-center gap-8">
-      <CardComponent v-for="(card, index) in cardsData" :key="index" :cardData="card"
-        @click="router.push({ name: 'scoltDetails', params: { id: card.id } })" />
-    </div>
-  </div>
+  <section v-class class="p-4 mx-auto flex flex-wrap max-w-screen-xl justify-center items-center gap-8 ">
+    <CardComponent v-for=" (card, index) in cardsData" :key="index" :cardData="card"
+      @click="router.push({ name: 'scoltDetails', params: { id: card.id } })" />
+  </section>
 </template>
