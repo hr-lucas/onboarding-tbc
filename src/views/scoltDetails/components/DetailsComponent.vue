@@ -20,7 +20,7 @@ let show2 = ref(false);
     <div class="bg-boxColor rounded h-full text-white">
 
         <button @click="show = !show"
-            class=" mb-4 w-full group flex items-center justify-between gap-4 px-5 py-3 transition-colors hover:bg-transparent border-b-1 accordion-label">
+            class=" mb-4 w-full group flex items-center justify-between gap-4 px-5 py-3 transition-colors hover:bg-transparent border-b-1 ">
             <span class="font-medium transition-colors group-hover:text-black group-active:text-white">
                 Perfil
             </span>
