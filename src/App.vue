@@ -4,8 +4,9 @@ import Header from './views/components/header.vue';
 </script>
 
 <template>
-  <main class=" bg-black h-full bg-[url('src/assets/logo-background.svg')] bg-no-repeat bg-center -z-10">
+  <main class="bg-black bg-[url('@/assets/logo-background.svg')] bg-no-repeat bg-center -z-10 h-screen">
     <Header />
-    <RouterView class="h-screen"/>
+    <RouterView />
+
   </main>
 </template>

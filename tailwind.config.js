@@ -11,6 +11,8 @@ module.exports = {
         primary: '#000000',
         secondary: '#202020',
         borderColor: '#313131',
+        boxColor: '#202020',
+        greenBtn: '#00A510'
       },
 
     },

@@ -1,8 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup>
+<script  setup>
 import router from '../../router';
 import CardComponent from './components/CardComponent.vue';
-
 
 const cardsData = [
   { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' },
@@ -14,19 +13,13 @@ const cardsData = [
   { id: 7, title: 'Card 7', content: 'Conteúdo do Card 7' },
   { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
 ];
-function redirectTodetails(id) {
-  console.log(id);
-  router.push({ name: "scoltDetails", params: { id: id } })
-}
-
-
 </script>
 
 <template>
-  <main class="pt-9">
+  <div class="pt-9">
     <div class="mx-auto flex flex-wrap max-w-screen-xl justify-center items-center gap-8">
       <CardComponent v-for="(card, index) in cardsData" :key="index" :cardData="card"
-        v-on:click="redirectTodetails(card.id)" />
+        @click="router.push({ name: 'scoltDetails', params: { id: card.id } })" />
     </div>
-  </main>
+  </div>
 </template>

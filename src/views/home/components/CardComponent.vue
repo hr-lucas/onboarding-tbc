@@ -1,11 +1,11 @@
 <script setup>
+// eslint-disable-next-line no-unused-vars
 const props = defineProps({
     cardData: {
         type: Object, // Tipo de dados que você espera receber
         required: true, // Obrigatório
     },
 });
-console.log("props", props.cardData)
 </script>
 <template>
     <div class=" p-3">
