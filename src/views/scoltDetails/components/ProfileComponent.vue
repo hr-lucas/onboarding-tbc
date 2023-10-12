@@ -10,8 +10,8 @@ const props = defineProps({
 console.log("props", props.data);
 </script>
 <template>
-    <div class="flex flex-col w-80 h-44 bg-boxColor relative rounded  text-white ">
-        <div class="flex justify-center">
+    <div class="flex flex-col w-80 h-44 bg-boxColor relative rounded  text-white max-md:w-full ">
+        <div class=" flex justify-center">
             <div class="flex w-28 h-full ">
                 <img class="absolute bottom-28 left-5 h-24 " src="@/assets/Ellipse.png" alt="">
             </div>

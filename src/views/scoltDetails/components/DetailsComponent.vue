@@ -17,7 +17,7 @@ let show2 = ref(false);
 }
 </style>
 <template>
-    <div class="bg-boxColor rounded h-full text-white">
+    <div class="bg-boxColor rounded h-full text-white max-md:w-full">
 
         <button @click="show = !show; show2 = false"
             class=" mb-4 w-full group flex items-center justify-between gap-4 px-5 py-3 transition-colors hover:bg-transparent border-b-1 ">
