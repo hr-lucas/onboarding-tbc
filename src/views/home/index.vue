@@ -1,5 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
+import router from '../../router';
 import CardComponent from './components/CardComponent.vue';
 
 
@@ -15,7 +16,7 @@ const cardsData = [
 ];
 function redirectTodetails(id) {
   console.log(id);
-
+  router.push({ name: "scoltDetails", params: { id: id } })
 }
 
 
@@ -24,7 +25,8 @@ function redirectTodetails(id) {
 <template>
   <main class="pt-9">
     <div class="mx-auto flex flex-wrap max-w-screen-xl justify-center items-center gap-8">
-      <CardComponent v-for="(card, index) in cardsData" :key="index" :cardData="card" v-on:click="redirectTodetails(card.id)" />
+      <CardComponent v-for="(card, index) in cardsData" :key="index" :cardData="card"
+        v-on:click="redirectTodetails(card.id)" />
     </div>
   </main>
 </template>
