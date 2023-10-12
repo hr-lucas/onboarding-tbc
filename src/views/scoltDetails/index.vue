@@ -13,7 +13,7 @@ const ker = { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' };
 
 </script>
 <template>
-    <main class=" p-4 mt-24 flex flex-wrap max-w-screen-xl mx-auto ">
+    <main class=" p-4 mt-24 flex flex-wrap max-w-screen-xl mx-auto h-full ">
         <div class="flex w-full gap-5 h-5/6">
             <div class="flex flex-col gap-4 w-80">
                 <ProfileComponent :data="ker" />
