@@ -21,7 +21,7 @@ let show2 = ref(false);
 
         <button @click="show = !show; show2 = false"
             class=" mb-4 w-full group flex items-center justify-between gap-4 px-5 py-3 transition-colors hover:bg-transparent border-b-1 ">
-            <span class="font-medium transition-colors group-hover:text-black group-active:text-white">
+            <span class="font-medium transition-colors group-hover:text-xl group-active:text-white">
                 Perfil
             </span>
         </button>
@@ -62,7 +62,7 @@ let show2 = ref(false);
         <button @click="show2 = !show2; show = false"
             class=" mb-4 w-full group flex items-center justify-between gap-4 px-5 py-3 transition-colors hover:bg-transparent border-b-1"
             href="/download">
-            <span class="font-medium transition-colors group-hover:text-black group-active:text-white">
+            <span class="font-medium transition-colors group-hover:text-xl group-active:text-white">
                 Atendimento
             </span>
         </button>
