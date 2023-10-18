@@ -4,6 +4,7 @@ import DescriptionComponent from './components/DescriptionComponent.vue';
 import DetailsComponent from './components/DetailsComponent.vue';
 import GalleryComponent from './components/GalleryComponent.vue';
 import ProfileComponent from './components/ProfileComponent.vue';
+import seeMoreComponent from './components/seeMoreComponent.vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
@@ -21,9 +22,12 @@ const ker = { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' };
                     <DetailsComponent />
                 </div>
             </div>
-            <div class="flex flex-col w-full gap-6">
-                <DescriptionComponent />
-                <GalleryComponent />
+            <div class="flex w-full gap-2">
+                <div class="flex flex-col gap-6 w-full">
+                    <DescriptionComponent />
+                    <GalleryComponent />
+                </div>
+                <seeMoreComponent />
                 <div class="mobile max-md:w-full md:hidden">
                     <DetailsComponent />
                 </div>
