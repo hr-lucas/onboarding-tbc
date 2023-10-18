@@ -35,129 +35,86 @@ let show2 = ref(false);
 }
 </style>
 <template>
-    <div class="bg-boxColor rounded text-white max-md:w-full">
+    <div class="bg-boxColor rounded text-white max-md:w-full mb-4">
 
-        <button @click="show = !show; show2 = false"
-            class=" mb-4 w-full group flex items-center justify-between gap-4 px-5 py-3 transition-colors hover:bg-transparent border-b-1 ">
-            <span
-                class="flex items-center justify-between w-full font-medium transition-colors group-hover:text-xl group-active:text-white">
-                Perfil <i :class="{ up: show, down: !show }" class="arrow "></i>
-            </span>
-        </button>
-        <div v-if="show" key="content" class="flow-root  y-3 shadow-sm">
-            <dl class="-my-3 divide-y divide-gray-100 text-sm">
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Title</dt>
-                    <dd class=" sm:col-span-2">Mr</dd>
-                </div>
+        <div key="content" class="flow-root  y-3 shadow-sm">
+            <dl class="-my-3 p-4 pt-6  text-lg">
+                <dt class=" mb-3">
+                    <b class="font-medium">Bairro: </b> Itami Bibi
+                </dt>
+                <dt class=" mb-3">
+                    <b class="font-medium">Idade:</b> 23
+                </dt>
+                <dt class=" mb-3">
+                    <b class="font-medium">Tipo: </b>Loira
+                </dt>
+                <dt class=" mb-3">
+                    <b class="font-medium">Biotipo: </b>sarada
+                </dt>
+                <dt class=" mb-3">
+                    <b class="font-medium">Altura: </b>1.58
+                </dt>
 
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Name</dt>
-                    <dd class=" sm:col-span-2">John Frusciante</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Occuputation</dt>
-                    <dd class=" sm:col-span-2">Guitarist</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Salary</dt>
-                    <dd class=" sm:col-span-2">$1,000,000+</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Bio</dt>
-                    <dd class=" sm:col-span-2">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et facilis
-                        debitis explicabo doloremque impedit nesciunt dolorem facere, dolor
-                        quasi veritatis quia fugit aperiam aspernatur neque molestiae labore
-                        aliquam soluta architecto?
-                    </dd>
-                </div>
+                <dt class=" mb-3">
+                    <b class="font-medium">Manequim: </b>38
+                </dt>
+                <dt class=" mb-3">
+                    <b class="font-medium">Pés: </b>35
+                </dt>
+                <dt class=" mb-3">
+                    <b class="font-medium">Cabelos: </b>Loiros
+                </dt>
+                <dt class=" mb-3">
+                    <b class="font-medium">Olhos: </b>Castanhos
+                </dt>
+                <dt class=" mb-3">
+                    <b class="font-medium">Horario: </b>24h
+                </dt>
+                <dt class=" mb-3">
+                    <b class="font-medium">Faz o perfil: </b>Namoradinha Universitária
+                </dt>
             </dl>
         </div>
 
+
+    </div>
+    <div class="bg-boxColor rounded text-white max-md:w-full ">
         <button @click="show2 = !show2; show = false"
-            class=" mb-4 w-full group flex items-center justify-between gap-4 px-5 py-3 transition-colors hover:bg-transparent border-b-1">
-            <span
-                class="flex items-center justify-between w-full font-medium transition-colors group-hover:text-xl group-active:text-white">
-                Atendimento <i :class="{ up: show2, down: !show2 }" class="arrow "></i>
+            class="w-full group flex items-center justify-between gap-4 px-5 py-3 transition-colors hover:border-borderColor text-xl">
+            <span class="flex items-center justify-between w-full font-medium transition-colors   group-active:text-white">
+                Mais Detalhes <i :class="{ up: show2, down: !show2 }" class="arrow "></i>
             </span>
         </button>
         <div v-if="show2 && !show" key="content" class="flow-root  y-3 shadow-sm">
-            <dl class="-my-3 divide-y divide-gray-100 text-sm">
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Title</dt>
-                    <dd class=" sm:col-span-2">Mr</dd>
-                </div>
+            <div key="content" class="flow-root  y-3 shadow-sm">
+                <dl class="-my-3 p-4 pt-6  text-lg">
+                    <dt class=" mb-3">
+                        <b class="font-medium">Acompanha: </b> Homens, Mulheres, Casais
+                    </dt>
+                    <dt class=" mb-3">
+                        <b class="font-medium">Atendo em: </b> Flat Próprio, Motéis, Hotéis, Eventos, Apartamentos, Casa,
+                        Escritórios, Casas de swing
+                    </dt>
+                    <dt class=" mb-3">
+                        <b class="font-medium">Cachê: </b>A combinar
+                    </dt>
+                    <dt class=" mb-3">
+                        <b class="font-medium">Periodo: </b>A combinar
+                    </dt>
+                    <dt class=" mb-3">
+                        <b class="font-medium">Especialidades: </b>Striptease, Pompoarismo, SadoMasoquismo, Dominação,
+                        Massagem Tântrica, Massagem Relaxante
+                    </dt>
 
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Name</dt>
-                    <dd class=" sm:col-span-2">John Frusciante</dd>
-                </div>
+                    <dt class=" mb-3">
+                        <b class="font-medium">Permite Fumar: </b>Sim
+                    </dt>
+                    <dt class=" mb-3">
+                        <b class="font-medium">Viaja: </b>Sim
+                    </dt>
 
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Occuputation</dt>
-                    <dd class=" sm:col-span-2">Guitarist</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Salary</dt>
-                    <dd class=" sm:col-span-2">$1,000,000+</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Bio</dt>
-                    <dd class=" sm:col-span-2">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et facilis
-                        debitis explicabo doloremque impedit nesciunt dolorem facere, dolor
-                        quasi veritatis quia fugit aperiam aspernatur neque molestiae labore
-                        aliquam soluta architecto?
-                    </dd>
-                </div>
-            </dl>
+                </dl>
+            </div>
         </div>
-        <!-- 
-        <button @click="show3 = !show3; show2 = false"
-            class=" mb-0 w-full group flex items-center justify-between gap-4 px-5 py-3 transition-colors hover:bg-transparent border-b-1">
-            <span
-                class="flex items-center justify-between w-full font-medium transition-colors group-hover:text-xl group-active:text-white">
-                Extra <i :class="{ up: show3, down: !show3 }" class="arrow "></i>
-            </span>
-        </button>
-        <div v-if="show3 = !show3" key="content" class="flow-root  y-3 shadow-sm">
-            <dl class="-my-3 divide-y divide-gray-100 text-sm">
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Title</dt>
-                    <dd class=" sm:col-span-2">Mr</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Name</dt>
-                    <dd class=" sm:col-span-2">John Frusciante</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Occuputation</dt>
-                    <dd class=" sm:col-span-2">Guitarist</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Salary</dt>
-                    <dd class=" sm:col-span-2">$1,000,000+</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3  sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium ">Bio</dt>
-                    <dd class=" sm:col-span-2">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et facilis
-                        debitis explicabo doloremque impedit nesciunt dolorem facere, dolor
-                        quasi veritatis quia fugit aperiam aspernatur neque molestiae labore
-                        aliquam soluta architecto?
-                    </dd>
-                </div>
-            </dl>
-        </div> -->
     </div>
 </template>

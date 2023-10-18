@@ -2,7 +2,7 @@
 <script setup>
 </script>
 <template>
-    <div class=" border-1 rounded border-gray-500 w-full h-64 ">
-
+    <div class=" border-1 rounded border-borderColor w-full h-64 text-white p-4">
+        <h5>Descrição: </h5>
     </div>
 </template>

@@ -12,12 +12,17 @@ const cardsData = [
   { id: 6, title: 'Card 6', content: 'Conteúdo do Card 6' },
   { id: 7, title: 'Card 7', content: 'Conteúdo do Card 7' },
   { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
+  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
+  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
+  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
+  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
+  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
 ];
 </script>
 
 <template>
-  <section class="p-4 mx-auto max-w-screen-xl h-screen max-xl:h-5/6 ">
-    <div class=" flex flex-wrap justify-center items-center gap-8">
+  <section class="p-4 mx-auto max-w-xx h-screen max-xl:h-5/6 ">
+    <div class=" flex flex-wrap justify-center items-center ">
       <CardComponent v-for=" (card, index) in cardsData" :key="index" :cardData="card"
         @click="router.push({ name: 'scoltDetails', params: { id: card.id } })" />
     </div>

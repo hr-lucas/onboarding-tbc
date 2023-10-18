@@ -12,9 +12,14 @@ module.exports = {
         secondary: '#202020',
         borderColor: '#313131',
         boxColor: '#202020',
-        greenBtn: '#00A510'
+        greenBtn: '#00A510',
       },
-
+      maxWidth: {
+        'xx': '1440px',
+      },
+      fontFamily: {
+        mon: ['Montserrat']
+      }
     },
     borderWidth: {
       DEFAULT: '1px',
