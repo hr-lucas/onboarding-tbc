@@ -14,7 +14,7 @@ console.log("props", props.data);
 
         <div class=" flex justify-center">
             <div class="flex w-28 h-full ">
-                <img class="absolute bottom-28 left-5 h-24 " src="@/assets/Ellipse.png" alt="">
+                <img class="absolute bottom-28 left-5 h-24 w-24 rounded-full" src="@/assets/Ellipse.png" alt="">
             </div>
             <div class="flex flex-col p-2">
                 <h1 class=" text-2xl">{{ props.data.title }}</h1>

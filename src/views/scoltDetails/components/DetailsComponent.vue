@@ -35,10 +35,10 @@ let show2 = ref(false);
 }
 </style>
 <template>
-    <div class="bg-boxColor rounded text-white max-md:w-full mb-4">
+    <div class="bg-boxColor rounded text-white max-md:w-full mb-4 p-4 ">
 
         <div key="content" class="flow-root  y-3 shadow-sm">
-            <dl class="-my-3 p-4 pt-6  text-lg">
+            <dl class="-my-3 pt-6  text-lg">
                 <dt class=" mb-3">
                     <b class="font-medium">Bairro: </b> Itami Bibi
                 </dt>

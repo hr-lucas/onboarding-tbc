@@ -24,13 +24,22 @@ const ker = { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' };
             </div>
             <div class="flex w-full gap-2  max-md:flex-col">
                 <div class="flex flex-col gap-6 w-full">
+
                     <DescriptionComponent />
                     <GalleryComponent />
                 </div>
                 <div class="max-md:hidden">
                     <seeMoreComponent />
+
                 </div>
                 <div class="mobile max-md:w-full md:hidden">
+                    <div class="p-6 text-white text-center  border-borderColor border-t-2 h-40">
+                        <div class="flex w-full justify-center ">
+                            <img class="h-24 w-24 rounded-full border-2 border-red-600"
+                                src="https://splove.com.br/storage/img/653e69d521a5d3bfc190c11eb79a9f7a.jpg" alt="">
+                        </div>
+                        <h6 class="text-xl mt-2">Paula Teste</h6>
+                    </div>
                     <DetailsComponent />
                 </div>
             </div>
