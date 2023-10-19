@@ -17,9 +17,6 @@ module.exports = {
       maxWidth: {
         'xx': '1440px',
       },
-      minWidth: {
-        'xx': '1920px',
-      },
       fontFamily: {
         mon: ['Montserrat']
       }
