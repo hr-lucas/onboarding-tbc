@@ -22,7 +22,7 @@ const ker = { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' };
                     <DetailsComponent />
                 </div>
             </div>
-            <div class="flex w-full gap-2">
+            <div class="flex w-full gap-2 flex-col">
                 <div class="flex flex-col gap-6 w-full">
                     <DescriptionComponent />
                     <GalleryComponent />
