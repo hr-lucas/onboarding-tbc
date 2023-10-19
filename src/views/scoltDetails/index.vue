@@ -65,7 +65,6 @@ const ker = { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' };
                                         <div class="mt-2 mb-2 ml-2 pl-4 pr-4 pt-2 pb-2 rounded-full text-center"
                                             style="background: #0c7b35;">
                                             <button type="submit" class="w-full">
-
                                                 <span class="text-white font-bold"> Conversar no WhatsApp </span>
                                             </button>
                                         </div>
