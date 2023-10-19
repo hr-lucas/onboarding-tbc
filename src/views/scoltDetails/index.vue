@@ -33,7 +33,6 @@ const ker = { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' };
                 <div class="mobile max-md:w-full md:hidden">
                     <DetailsComponent />
                 </div>
-
             </div>
         </div>
         <section id="bottom-navigation" style="background-color: #151515;"
@@ -69,5 +68,9 @@ const ker = { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' };
                 </div>
             </div>
         </section>
+
+
+
+
     </section>
 </template>

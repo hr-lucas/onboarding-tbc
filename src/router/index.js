@@ -13,7 +13,11 @@ const router = createRouter({
       path: '/scolt/:id',
       name: 'scoltDetails',
       component: () => import('../views/scoltDetails/index.vue'),
-
+    },
+    {
+      path: '/terms',
+      name: 'terms',
+      component: () => import('../views/politics/index.vue'),
     }
   ]
 })

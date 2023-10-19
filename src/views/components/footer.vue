@@ -11,6 +11,12 @@ const route = useRoute();
                 class=" bg-boxColor text-white border-1 border-border-borderColor p-2 w-28 rounded text-center ">
                 Voltar
             </RouterLink>
+            <RouterLink to="terms" class="text-white text-center ">
+                Termos de privacidade
+            </RouterLink>
+
+
+
         </div>
     </footer>
 </template>
