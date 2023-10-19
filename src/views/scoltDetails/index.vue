@@ -33,7 +33,7 @@ const ker = { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' };
 
                 </div>
                 <div class="mobile max-md:w-full md:hidden">
-                    <div class="p-6 text-white text-center  border-borderColor border-t-2 h-40">
+                    <div class="p-2 text-white text-center  border-borderColor border-t-2 h-40">
                         <div class="flex w-full justify-center ">
                             <img class="h-24 w-24 rounded-full border-2 border-red-600"
                                 src="https://splove.com.br/storage/img/653e69d521a5d3bfc190c11eb79a9f7a.jpg" alt="">
