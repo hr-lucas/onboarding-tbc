@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { useRoute } from 'vue-router';
-import { ref } from 'vue'
+import { ref } from 'vue';
 import pdf1 from '@/assets/POLÍTICA DE PRIVACIDADE e USO DE DADOS PESSOAIS SITE.pdf'
 import pdf2 from '@/assets/TERMOS E CONDIÇÕES DE USO SITE Geral.pdf'
 import pdf3 from '@/assets/TERMOS E CONDIÇÕES DE USO E ADESÃO SITE Anunciante.pdf'
