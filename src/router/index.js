@@ -10,7 +10,7 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/scolt/:id',
+      path: '/acompanhante/:id',
       name: 'scoltDetails',
       component: () => import('../views/scoltDetails/index.vue'),
     },

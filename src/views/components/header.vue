@@ -5,7 +5,7 @@ const route = useRoute();
 </script>
 <template>
     <header class="bg-black border-b-1 border-borderColor border-l-borderColor">
-        <div class="mx-auto flex h-16 max-w-xx items-center gap-8 px-4 sm:px-6 lg:px-8 justify-between">
+        <div class="mx-auto flex h-full max-h-[100px] max-w-xx items-center gap-8 px-4 sm:px-6 lg:px-8 justify-between">
             <img @click="$router.push({ name: 'home' })" src="@/assets/logo.svg" alt="The Boss Club"
                 class=" cursor-pointer">
             <RouterLink v-if="route.fullPath != '/'" to="/"

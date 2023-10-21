@@ -1,30 +1,40 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script  setup>
-import router from '../../router';
-import CardComponent from './components/CardComponent.vue';
-
-const cardsData = [
-  { id: 1, title: 'Card 1', content: 'Conteúdo do Card 1' },
-  { id: 2, title: 'Card 2', content: 'Conteúdo do Card 2' },
-  { id: 3, title: 'Card 3', content: 'Conteúdo do Card 3' },
-  { id: 4, title: 'Card 4', content: 'Conteúdo do Card 4' },
-  { id: 5, title: 'Card 5', content: 'Conteúdo do Card 5' },
-  { id: 6, title: 'Card 6', content: 'Conteúdo do Card 6' },
-  { id: 7, title: 'Card 7', content: 'Conteúdo do Card 7' },
-  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
-  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
-  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
-  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
-  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
-  { id: 8, title: 'Card 8', content: 'Conteúdo do Card 8' },
-];
+<script setup>
+import router from "../../router";
+import CardComponent from "./components/CardComponent.vue";
+import { onMounted, ref } from "vue";
+import { api } from "@/ultils/services/services.js";
+import { useLoadingStore } from "@/views/store/loading.js";
+const LoadingStore = useLoadingStore();
+// const storeValue = reactive(LoadingStore);
+const listScot = ref(null);
+onMounted(async () => {
+  LoadingStore.loadingRequest = true;
+  await api
+    .get("/produto")
+    .then((res) => {
+      listScot.value = res.data;
+      LoadingStore.loadingRequest = false;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 </script>
 
 <template>
-  <section class="p-1 mx-auto max-w-xx min-h-screen max-xl:h-5/6   ">
-    <div class=" flex flex-wrap justify-center items-center   ">
-      <CardComponent v-for=" (card, index) in cardsData" :key="index" :cardData="card"
-        @click="router.push({ name: 'scoltDetails', params: { id: card.id } })" />
+  <section class="p-1 mx-auto max-w-xx">
+    <h1 class="text-white text-2xl font-bold text-center mb-5">
+      Acompanhantes
+    </h1>
+    <div class="flex flex-wrap justify-center items-center">
+      <CardComponent
+        class="cursor-pointer"
+        v-for="(card, index) in listScot"
+        :key="index"
+        :cardData="card"
+        @click="router.push({ name: 'scoltDetails', params: { id: card.id } })"
+      />
     </div>
   </section>
 </template>
