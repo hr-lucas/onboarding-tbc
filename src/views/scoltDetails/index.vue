@@ -70,7 +70,7 @@ const get_feed = async () => {
           <FeedComponent :info="infos" :feed="infos2" />
         </div>
         <div class="max-md:hidden">
-          <seeMoreComponent :info="infos" />
+          <seeMoreComponent :data="infos.veja_tambem" />
         </div>
         <div class="mobile max-md:w-full md:hidden">
           <div class="p-2 text-white text-center border-borderColor border-t-2 h-40">

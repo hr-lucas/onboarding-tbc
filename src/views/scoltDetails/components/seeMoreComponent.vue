@@ -6,16 +6,16 @@ const props = defineProps({
         required: true,
     },
 })
-console.log(props.data);
+console.log('aaa', props.data);
 </script>
 <template>
     <div class="flex flex-col bg-boxColor rounded  text-white max-xl:hidden p-1">
-        <div class="h-full  w-72 ">
-            <h1 class=" text-center text-3xl">Veja também!</h1>
-            <div class="flex justify-center h-64">
-                <img class="h-full" src="https://splove.com.br/storage/img/653e69d521a5d3bfc190c11eb79a9f7a.jpg" alt="">
+        <div class="h-full w-72 p-2">
+            <h1 class=" text-center text-3xl mb-2">Veja também!</h1>
+            <div class=" h-64 overflow-hidden object-cover">
+                <img class="w-full" :src="props.data.img" :alt="props.data.nome">
             </div>
-            <p class=" text-center text-xl p-2">Pietra Rut </p>
+            <p class=" text-center text-xl p-2">{{ props.data.nome }} </p>
         </div>
     </div>
 </template>
