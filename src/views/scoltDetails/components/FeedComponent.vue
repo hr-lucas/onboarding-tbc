@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import 'viewerjs/dist/viewer.css'
+
 const props = defineProps({
     feed: {
         type: Object,
@@ -11,30 +12,7 @@ const props = defineProps({
         required: true,
     },
 })
-let data = [
-    {
-        "id": 15,
-        "author": "MarcelaTeste",
-        "date": "2023-10-21 01:56:28",
-        "conteudo": {
-            "src": "https://multiplycompany.store/wp-content/uploads/2023/10/ccc_YD8nEGZvVyHDHp7NLd8i48W061G1bppI14KHWW9e-1.mp4",
-            "tipo": "mp4",
-            "description": "Marcela Fontanasdsdsdsdsd"
-        },
-        "total_comments": "0"
-    },
-    {
-        "id": 15,
-        "author": "MarcelaTeste",
-        "date": "2023-10-21 01:56:28",
-        "conteudo": {
-            "src": "https://splove.com.br/storage/img/653e69d521a5d3bfc190c11eb79a9f7a.jpg",
-            "tipo": "image",
-            "description": "Marcela Fontanasdsdsdsdsd"
-        },
-        "total_comments": "0"
-    }
-]
+
 console.log('feed', props.feed);
 console.log('info', props.info);
 </script>
@@ -43,7 +21,7 @@ console.log('info', props.info);
     <div>
         <div class="border-1 border-t-[0px]  border-borderColor text-white p-4">
             <div id="feed-body" tabindex="-1" role="dialog" aria-hidden="false">
-                <div class="feed" v-for="(feeds, index) of data" :key="index">
+                <div class="feed" v-for="(feeds, index) of props.feed" :key="index">
                     <div>
                         <div class="w-full">
                             <div class="flex p-2 mb-4 text-white text-center w-full">
