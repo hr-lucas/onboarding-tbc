@@ -7,14 +7,14 @@ import Loading from "./views/components/Loading.vue";
 import { useLoadingStore } from "@/views/store/loading.js";
 const LoadingStore = useLoadingStore();
 const storeValue = reactive(LoadingStore);
+
 </script>
 
 <template>
   <div>
     <Loading v-if="storeValue.loadingRequest" />
     <main
-      class="bg-black bg-[url('@/assets/logo-background.svg')] bg-no-repeat bg-center min-h-screen flex flex-col justify-between"
-    >
+      class="bg-black bg-[url('@/assets/logo-background.svg')] bg-no-repeat bg-center min-h-screen flex flex-col justify-between">
       <Header class="h-20" />
       <div class="flex-1 flex flex-col justify-center">
         <RouterView />

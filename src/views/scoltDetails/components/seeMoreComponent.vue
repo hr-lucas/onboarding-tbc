@@ -1,5 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
+const props = defineProps({
+    data: {
+        type: Object,
+        required: true,
+    },
+})
+console.log(props.data);
 </script>
 <template>
     <div class="flex flex-col bg-boxColor rounded  text-white max-xl:hidden p-1">

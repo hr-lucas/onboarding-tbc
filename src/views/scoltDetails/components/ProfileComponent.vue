@@ -1,32 +1,48 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-
 const props = defineProps({
     data: {
-        type: Object, // Tipo de dados que você espera receber
-        required: true, // Obrigatório
+        type: Object,
+        required: true,
     },
 })
-console.log("props", props.data);
-</script>
-<template>
-    <div class="flex flex-col w-80 h-44 bg-boxColor relative rounded  text-white max-md:w-full ">
 
-        <div class=" flex justify-center">
-            <div class="flex w-28 h-full ">
-                <img class="absolute bottom-28 left-5 h-24 w-24 rounded-full" src="@/assets/Ellipse.png" alt="">
+const formatPhoneNumber = (phoneNumber) => {
+    if (!phoneNumber) return '';
+    const numericPhoneNumber = phoneNumber.replace(/\D/g, '');
+    const formattedPhoneNumber = `(${numericPhoneNumber.slice(0, 2)}) ${numericPhoneNumber.slice(2, 7)}-${numericPhoneNumber.slice(7)}`;
+    return formattedPhoneNumber;
+}
+</script>
+
+<template>
+    <div class="flex flex-col w-80 h-44 bg-boxColor relative rounded text-white max-md:w-full">
+        <div class="flex justify-center">
+            <div class="flex w-28 h-full">
+                <div
+                    class="absolute bottom-28 left-5 h-24 w-24 rounded-full  overflow-hidden flex items-center justify-center">
+                    >
+                    <img class="w-full" :src="props.data?.informacoes?.foto_perfil" alt="">
+                </div>
             </div>
             <div class="flex flex-col p-2">
-                <h1 class=" text-2xl">{{ props.data.title }}</h1>
-                {{ props.data.content }}
+                <h1 class="text-2xl">{{ props.data?.informacoes?.nome }}</h1>
+                <div class="flex items-center">
+                    <img class="w-3 h-3" src="@/assets/ig-icon.svg" />
+                    <h2 class="text-1xl">{{ props.data.id }}</h2>
+                </div>
             </div>
         </div>
         <div class="p-3 flex justify-center">
-            <button class=" bg-greenBtn h-full rounded p-3  text-2xl flex justify-center items-end w-72 font-bold">
-                <img class=" h-6 mr-1 " src="@/assets/wppIcon.svg" alt="">
-                (99) 99999-99999
-            </button>
+            <a wire:click.lazy="submit"
+                :href="`https://wa.me/${props.data?.informacoes?.telefone}?text=Olá,%20te%20vi%20no%20SPLove!%20Gostaria%20de%20mais%20informações.`"
+                target="_blank">
+                <button class="bg-greenBtn h-full rounded p-3 text-2xl flex justify-center items-end w-72 font-bold">
+                    <img class="h-6 mr-1" src="@/assets/wppIcon.svg" alt="">
+                    {{ formatPhoneNumber(props.data?.informacoes?.telefone) }}
+                </button>
+            </a>
         </div>
-        <h4 class=" text-center text-sm">Fale com ela sem adicionar </h4>
+        <h4 class="text-center text-sm">Fale com ela sem adicionar</h4>
     </div>
 </template>
