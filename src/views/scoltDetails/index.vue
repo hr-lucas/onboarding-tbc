@@ -97,7 +97,7 @@ const get_feed = async () => {
           <div wire:id="8t3twC9GU7pRmPU0ZRFX">
             <div wire:ignore="">
               <a wire:click.lazy="submit"
-                :href="`https://wa.me/${infos?.informacoes?.telefone}?text=Olá,%20te%20vi%20no%20SPLove!%20Gostaria%20de%20mais%20informações.`"
+                :href="`https://wa.me/${infos?.informacoes?.telefone}?text=Olá,%20te%20vi%20no%20TheBossClub!%20Gostaria%20de%20mais%20informações.`"
                 target="_blank">
                 <div class="mt-2 mb-2 ml-2 pl-4 pr-4 pt-2 pb-2 rounded-full text-center" style="background: #0c7b35">
                   <button type="submit" class="w-full">

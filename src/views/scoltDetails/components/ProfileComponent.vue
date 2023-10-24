@@ -10,7 +10,10 @@ const props = defineProps({
 const formatPhoneNumber = (phoneNumber) => {
     if (!phoneNumber) return '';
     const numericPhoneNumber = phoneNumber.replace(/\D/g, '');
-    const formattedPhoneNumber = `(${numericPhoneNumber.slice(0, 2)}) ${numericPhoneNumber.slice(2, 7)}-${numericPhoneNumber.slice(7)}`;
+    if (numericPhoneNumber.length < 11) {
+        return 'Número de telefone incompleto';
+    }
+    const formattedPhoneNumber = `+${numericPhoneNumber.slice(0, 2)} (${numericPhoneNumber.slice(2, 4)}) ${numericPhoneNumber.slice(4, 9)}-${numericPhoneNumber.slice(9)}`;
     return formattedPhoneNumber;
 }
 </script>
@@ -18,10 +21,9 @@ const formatPhoneNumber = (phoneNumber) => {
 <template>
     <div class="flex flex-col w-80 h-44 bg-boxColor relative rounded text-white max-md:w-full">
         <div class="flex justify-center">
-            <div class="flex w-28 h-full">
+            <div class="flex w-24 h-full">
                 <div
                     class="absolute bottom-28 left-5 h-24 w-24 rounded-full  overflow-hidden flex items-center justify-center">
-                    >
                     <img class="w-full" :src="props.data?.informacoes?.foto_perfil" alt="">
                 </div>
             </div>
@@ -35,11 +37,11 @@ const formatPhoneNumber = (phoneNumber) => {
         </div>
         <div class="p-3 flex justify-center">
             <a wire:click.lazy="submit"
-                :href="`https://wa.me/${props.data?.informacoes?.telefone}?text=Olá,%20te%20vi%20no%20SPLove!%20Gostaria%20de%20mais%20informações.`"
+                :href="`https://wa.me/${props.data?.informacoes?.telefone}?text=Olá,%20te%20vi%20no%20TheBossClub!%20Gostaria%20de%20mais%20informações.`"
                 target="_blank">
                 <button class="bg-greenBtn h-full rounded p-3 text-2xl flex justify-center items-end w-72 font-bold">
                     <img class="h-6 mr-1" src="@/assets/wppIcon.svg" alt="">
-                    {{ formatPhoneNumber(props.data?.informacoes?.telefone) }}
+                    <p class="m-0 text-xl">{{ formatPhoneNumber(props.data?.informacoes?.telefone) }}</p>
                 </button>
             </a>
         </div>
